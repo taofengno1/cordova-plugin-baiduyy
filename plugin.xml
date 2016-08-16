@@ -64,38 +64,4 @@
 
     <dependency id="cordova-plugin-settings-hook"/>
   </platform>
-    <js-module src="www/Trace.js">
-      <clobbers target="cordova.baiduTrace" />
-    </js-module>
-
-    <config-file target="config.xml" parent="/*">
-        <feature name="BaiduTrace">
-            <param name="ios-package" value="BaiduTrace" />
-        </feature>
-    </config-file>
-
-    <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
-      <dict>
-          <key>NSAllowsArbitraryLoads</key>
-          <true/>
-      </dict>
-    </config-file>
-
-    <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
-      <string>需要持续定位</string>
-    </config-file>
-
-    <config-file target="*-Info.plist" parent="UIBackgroundModes">
-      <array>
-          <string>location</string>
-      </array>
-    </config-file>
-
-    <framework src="src/ios/libs/BaiduTraceSDK.framework" custom="true" embed="true"/>
-    <hook type="after_platform_add" src="hooks/addEmbedded.js"/>
-    <source-file src="src/ios/BaiduTrace.h"/>
-    <source-file src="src/ios/BaiduTrace.m"/>
-    <dependency id="cordova-plugin-settings-hook"/>
-    <dependency id="cordova-plugin-add-swift-support"/>
-  </platform>
 </plugin>
