@@ -6,7 +6,7 @@
 [百度的鹰眼系统](http://lbsyun.baidu.com/index.php?title=yingyan)
 
 # 下载安装
-`cordova plugin add cordova-baidu-yingya`
+`cordova plugin add https://github.com/taofengno1/cordova-plugin-baiduyy.git`
 
 # 配置
 ## android
@@ -23,13 +23,6 @@ config.xml:
         android:value="你的android AK" />
     </config-file>
   </platform>
-```
-
-## ios
-config.xml里添加如下代码，配置AK和Mcode:
-```
-  <preference name="BaiduTraceIOSAK" value="你的IOSAK" />
-  <preference name="BaiduTraceIOSMCode" value="你的Mcode" />
 ```
 
 # js API
@@ -117,12 +110,3 @@ config.xml里添加如下代码，配置AK和Mcode:
         alert('停止收集失败：'+error)
       });
 ```
-
-# IOS特别说明
-  这个plugin里包的是百度鹰眼的ios开发版SDK，只能用于开发和模拟器调试，不能上架和真机调试。
-  如需上架或者真机调试，请下载上架版。
-
-  [百度鹰眼IOS SDK下载连接](http://lbsyun.baidu.com/index.php?title=ios-yingyan/sdkandev-download)
-
-# Next
-提供更多接口
